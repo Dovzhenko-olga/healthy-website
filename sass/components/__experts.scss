@@ -1,0 +1,228 @@
+.experts {
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $primary-bg-color;
+
+  @media (min-width: $mobile) {
+    height: 500px;
+  }
+  @media screen and (max-width: 1151px) {
+    padding: 25px;
+  }
+  @media screen and (min-width: $desktop) {
+    height: 700px;
+  }
+}
+.experts__info {
+  position: relative;
+  height: 170px;
+  margin: 0;
+  margin-left: 0;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width: $tablet) {
+    margin-left: 50px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-top: 53px;
+    margin-left: 218px;
+    height: 200px;
+    padding: 51px 76px 33px 31px;
+  }
+}
+.experts__info-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 15px;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+  border-radius: 16px;
+  z-index: 1;
+
+  @media (min-width: $mobile) {
+    padding: 18px 50px;
+    height: 117px;
+  }
+  @media (min-width: $tablet) {
+    width: 654px;
+    padding: 28px 80px;
+  }
+}
+.experts__info-item {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.14em;
+  color: $red-logo-color;
+  &:not(:last-child) {
+    margin-right: 10px;
+
+    @media (min-width: $mobile) {
+      margin-right: 20px;
+    }
+  }
+
+  @media (min-width: $mobile) {
+    font-size: 24px;
+  }
+  @media (min-width: $tablet) {
+    font-size: 36px;
+  }
+}
+.experts__info-text {
+  margin-top: 5px;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 1.19;
+  letter-spacing: 0.37em;
+  text-transform: uppercase;
+  color: $title-text-color;
+}
+.experts__info-decor97 {
+  position: absolute;
+  width: 97px;
+  height: 97px;
+  top: 15px;
+  left: 240px;
+  border-radius: 30px;
+  transform: rotate(105deg);
+}
+.experts__info-decor65 {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 16px;
+  transform: rotate(-30deg);
+
+  @media screen and (max-width: 479px) {
+    bottom: 35px;
+  }
+}
+.experts__info-decor127 {
+  position: absolute;
+  width: 127px;
+  height: 127px;
+  top: 50px;
+  right: 30px;
+  border-radius: 30px;
+  transform: rotate(-30deg);
+
+  @media screen and (max-width: 479px) {
+    top: -20px;
+    right: 125px;
+  }
+}
+.experts__descr {
+  width: 250px;
+  height: 181px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: 200px;
+    height: 181px;
+    margin-top: 40px;
+    margin-left: 0;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 280px;
+    margin-left: 50px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 393px;
+    margin-top: 60px;
+    margin-left: 92px;
+  }
+}
+.experts__descr-title {
+  @extend %global-title;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  & span {
+    color: $blue-accent-color;
+  }
+
+  @media screen and (min-width: $mobile) {
+    font-size: 24px;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 44px;
+  }
+}
+.experts__descr-text {
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
+}
+.experts__movie {
+  position: relative;
+  padding: 5px 10px;
+  width: 200px;
+  height: 160px;
+  margin-bottom: 0px;
+  margin-left: 30px;
+  background: #ffffff;
+  box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+  border-radius: 8px;
+
+  @media screen and (max-width: 479px) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 321px;
+    height: 184px;
+    margin-left: 50px;
+    padding: 5px 20px;
+  }
+  @media screen and (max-width: 1151px) {
+    margin-top: 50px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 24px 94px;
+    width: 521px;
+    height: 284px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+  }
+}
+.experts__movie-img {
+  width: 290px;
+  height: 154px;
+
+  @media screen and (min-width: $desktop) {
+    width: 333px;
+    height: 235px;
+  }
+}
+.experts__movie-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.experts__movie-icon {
+  fill: #587eec;
+  transition: all 0.3s $timing-function;
+
+  &:hover,
+  &:focus {
+    fill: #1455be;
+  }
+}

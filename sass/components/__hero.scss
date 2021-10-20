@@ -1,0 +1,151 @@
+.hero {
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  height: 320px;
+  background-color: $primary-bg-color;
+
+  @media (min-width: $mobile) {
+    height: 405px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-left: 50px;
+    padding-right: 53px;
+    height: 420px;
+  }
+  @media (min-width: $desktop) {
+    height: 620px;
+  }
+}
+.hero__descr {
+  width: 250px;
+  margin-top: 25px;
+
+  @media screen and (max-width: 479px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: $mobile) {
+    margin-top: 43px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 330px;
+  }
+  @media (min-width: $desktop) {
+    margin-top: 163px;
+    width: 497px;
+  }
+}
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  @extend %global-title;
+  font-size: 30px;
+  & span {
+    color: $blue-accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 36px;
+  }
+  @media (min-width: $desktop) {
+    font-size: 44px;
+  }
+}
+.hero__text {
+  margin-bottom: 12px;
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 24px;
+  }
+}
+.hero__btn {
+  display: block;
+  margin-bottom: 12px;
+  padding: 14px 29px;
+  width: 144px;
+  height: 40px;
+  background: $red-logo-color;
+  box-shadow: 11px 12px 5px 1px rgba(88, 126, 236, 0.18);
+  color: $primary-white-color;
+  border-radius: 5px;
+  font-family: $font-family-nav;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-align: center;
+  transition: all 0.3s $timing-function;
+
+  &:hover,
+  &:focus {
+    background: #aa4e55;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 24px;
+  }
+  @media (min-width: $desktop) {
+    margin-bottom: 148px;
+  }
+}
+.hero__movie {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  @media (min-width: $desktop) {
+    margin-bottom: 48px;
+  }
+}
+.hero__movie:hover .hero__movie-img {
+  stroke: #1455be;
+  fill: #bbceec;
+}
+
+.hero__movie-img {
+  margin-right: 12px;
+  stroke: #4285f4;
+  fill: none;
+  transition: all 0.3s $timing-function;
+}
+
+.hero__movie-descr {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  line-height: 1.26;
+  letter-spacing: 0.08em;
+  color: #b0b0b0;
+  & span {
+    margin-top: 5px;
+    font-size: 9px;
+    letter-spacing: 0.165em;
+    text-transform: uppercase;
+    color: $title-text-color;
+  }
+}
+.hero__img {
+  margin-top: 25px;
+  margin-left: auto;
+  width: 220px;
+  height: 175px;
+  z-index: 1;
+
+  @media screen and (max-width: 479px) {
+    display: none;
+  }
+  @media screen and (min-width: $mobile) {
+    margin-top: 60px;
+    width: 250px;
+    height: 205px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 477px;
+    height: 295px;
+  }
+  @media (min-width: $desktop) {
+    margin-top: 73px;
+    width: 547px;
+    height: 395px;
+  }
+}

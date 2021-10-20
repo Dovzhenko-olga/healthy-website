@@ -1,0 +1,16 @@
+.footer {
+  padding: 19px 50px 46px;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (min-width: $tablet) {
+    height: 130px;
+  }
+}
+.footer__link {
+  &:not(:last-child) {
+    margin-right: 57px;
+  }
+}
