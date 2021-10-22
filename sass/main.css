@@ -44,17 +44,6 @@ button {
   cursor: pointer;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
 .container {
   margin: 0 auto;
 }
@@ -332,6 +321,11 @@ button {
     z-index: 2;
     -webkit-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .active::after,
+  .active::before,
+  .active span {
+    background-color: #ec5863;
   }
   .menu__list.menu__list--active {
     -webkit-transform: translateY(0);
@@ -1465,5 +1459,61 @@ button {
 
 .footer__link:not(:last-child) {
   margin-right: 57px;
+}
+
+.scroll {
+  display: none;
+  position: fixed;
+  z-index: 12;
+  right: 7%;
+  bottom: 30px;
+  margin: 0;
+  padding: 0;
+  border: transparent;
+  outline: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #ec5863;
+  background: none;
+  -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll:hover, .scroll:focus {
+  color: #4285f4;
+  -webkit-transform: scale(0.91);
+          transform: scale(0.91);
+}
+
+@media screen and (min-width: 1152px) {
+  .scroll:hover, .scroll:focus {
+    -webkit-transform: scale(1.07);
+            transform: scale(1.07);
+  }
+}
+
+.scroll__icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+@media screen and (min-width: 771px) {
+  .scroll__icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .scroll__icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

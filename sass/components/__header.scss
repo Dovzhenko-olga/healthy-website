@@ -196,6 +196,11 @@
     z-index: 2;
     transition: all 0.3s $timing-function;
   }
+  .active::after,
+  .active::before,
+  .active span {
+    background-color: $red-logo-color;
+  }
   .menu__list.menu__list--active {
     transform: translateY(0);
   }
